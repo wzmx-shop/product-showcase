@@ -232,33 +232,316 @@
  * 单文件里 window.APP_DATA 已存在，fetch 会跳过。
  * ================================================================ */
 const APP_DATA = {
-  "site": {
-    "title": "精选商品"
-  },
-  "nav": [
-    { "type": "category", "name": "全部" },
-    { "type": "category", "name": "数码" },
-    { "type": "category", "name": "服饰" },
-    { "type": "category", "name": "家居" },
-    { "type": "category", "name": "食品" }
-  ],
-  "products": [
-    { "id": "p01", "name": "无线蓝牙耳机 半入耳降噪运动耳机", "brief": "轻盈佩戴 · 24小时长续航", "price": 299, "orig": 399, "cat": "数码", "sales": "已售 2.3万", "img": "p01.jpg", "tags": [], "desc": "mnjjij", "specs": { "蓝牙版本": "5.3", "续航": "6h + 充电盒18h", "防水等级": "IPX5", "单耳重量": "3.9g", "颜色": "珍珠白 / 曜石黑" }, "order": 1 },
-    { "id": "p02", "name": "智能运动手表 心率血氧监测多功能手环", "brief": "1.85英寸大屏 · 14天续航", "price": 599, "orig": 799, "cat": "数码", "sales": "已售 1.1万", "img": "p02.jpg", "tags": ["包邮", "7天无理由退换"], "desc": "1.85英寸高清大屏，支持心率、血氧、睡眠全天候监测，内置100+运动模式。50米防水，游泳佩戴无忧。典型使用场景下续航长达14天，告别电量焦虑。", "specs": { "屏幕": "1.85英寸 AMOLED", "续航": "典型14天", "防水": "5ATM", "运动模式": "100+ 种", "兼容": "Android / iOS" }, "order": 2 },
-    { "id": "p03", "name": "便携蓝牙音箱 户外迷你重低音小钢炮", "brief": "360°环绕声 · IPX7防水", "price": 199, "orig": 259, "cat": "数码", "sales": "已售 8600", "img": "p03.jpg", "tags": ["包邮", "一年质保"], "desc": "小身材大音量，定制全频单元加被动低音辐射器，低音澎湃有力。IPX7级防水，浴室、泳池、露营都能用。支持两台串联组成立体声，续航12小时。", "specs": { "功率": "10W", "续航": "12小时", "防水": "IPX7", "重量": "420g", "充电口": "Type-C" }, "order": 3 },
-    { "id": "p04", "name": "纯棉白色短袖T恤 男女同款基础打底", "brief": "220g重磅纯棉 · 不易变形", "price": 79, "orig": 129, "cat": "服饰", "sales": "已售 5.6万", "img": "p04.jpg", "tags": ["包邮", "7天无理由退换"], "desc": "精选220g新疆长绒棉，厚实不透，水洗预缩工艺不易变形。经典小圆领，版型微宽松，单穿打底都好看，是衣柜里少不了的基础款。", "specs": { "面料": "100% 精梳棉", "克重": "220g", "版型": "微宽松", "尺码": "S - 2XL", "颜色": "白 / 黑 / 灰" }, "order": 4 },
-    { "id": "p05", "name": "复古水洗牛仔外套 宽松工装夹克", "brief": "经典水洗蓝 · 四季百搭", "price": 259, "orig": 359, "cat": "服饰", "sales": "已售 4200", "img": "p05.jpg", "tags": ["包邮", "7天无理由退换"], "desc": "12oz重磅丹宁面料，经多道水洗工艺呈现自然复古色落。宽松廓形不挑身材，胸前双口袋经典实用，春秋外穿、冬季内搭都合适。", "specs": { "面料": "12oz 丹宁", "成分": "棉 98% + 氨纶 2%", "版型": "宽松", "尺码": "M - 2XL" }, "order": 5 },
-    { "id": "p06", "name": "轻便帆布双肩包 大容量通勤旅行背包", "brief": "15.6英寸电脑仓 · 仅重580g", "price": 139, "orig": 199, "cat": "服饰", "sales": "已售 9800", "img": "p06.jpg", "tags": ["包邮"], "desc": "高密度帆布面料，耐磨防泼水。独立电脑仓可容纳15.6英寸笔记本，多隔层设计收纳有序。背部透气网垫加厚肩带，长时间背负也舒适。", "specs": { "容量": "20L", "重量": "580g", "材质": "高密度帆布", "电脑仓": "15.6英寸", "颜色": "米白 / 卡其 / 黑" }, "order": 6 },
-    { "id": "p07", "name": "哑光陶瓷马克杯 北欧简约咖啡杯", "brief": "350ml · 磨砂质感", "price": 49, "orig": 69, "cat": "家居", "sales": "已售 1.8万", "img": "p07.jpg", "tags": ["破损包赔"], "desc": "高温烧制陶瓷，杯身哑光磨砂釉面，手感细腻。350ml黄金容量，泡咖啡、麦片、牛奶都刚好。可进洗碗机、微波炉，日常使用省心。", "specs": { "容量": "350ml", "材质": "高温陶瓷", "适用": "洗碗机 / 微波炉", "颜色": "奶白 / 雾灰 / 抹茶绿" }, "order": 7 },
-    { "id": "p08", "name": "北欧原木台灯 卧室床头暖光小夜灯", "brief": "三档调光 · 原木灯座", "price": 169, "orig": 229, "cat": "家居", "sales": "已售 3600", "img": "p08.jpg", "tags": ["包邮", "一年质保"], "desc": "橡胶木灯座搭配布艺灯罩，光线经柔化处理温暖不刺眼。触控三档调光，睡前阅读、起夜照明一键切换，为卧室添一份自然气息。", "specs": { "光源": "E27 LED（含灯泡）", "调光": "触控三档", "灯座": "天然橡胶木", "尺寸": "Ø20 × H32cm" }, "order": 8 },
-    { "id": "p09", "name": "香薰蜡烛礼盒 大豆蜡助眠香氛三件套", "brief": "天然大豆蜡 · 三种香型", "price": 89, "orig": 129, "cat": "家居", "sales": "已售 7200", "img": "p09.jpg", "tags": ["包邮", "礼盒装"], "desc": "选用天然大豆蜡与无铅棉芯，燃烧洁净无黑烟。礼盒含海盐鼠尾草、英国梨小苍兰、丝绒玫瑰三种经典香型，单杯可燃约25小时，自用送礼两相宜。", "specs": { "蜡材": "天然大豆蜡", "规格": "150g × 3杯", "燃烧时长": "约25h/杯", "包装": "礼盒装" }, "order": 9 },
-    { "id": "p10", "name": "每日坚果混合装 30包独立小袋零食", "brief": "科学配比 · 一天一包", "price": 69, "orig": 99, "cat": "食品", "sales": "已售 3.4万", "img": "p10.jpg", "tags": ["包邮", "新鲜日期"], "desc": "6种坚果+3种果干科学配比，每包含腰果、巴旦木、核桃、榛子、蔓越莓干等。独立小袋锁鲜包装，一天一包补充优质脂肪，办公加餐、健身补给都合适。", "specs": { "规格": "25g × 30包", "保质期": "8个月", "储存": "阴凉干燥处", "产地": "中国" }, "order": 10 },
-    { "id": "p11", "name": "精品挂耳咖啡 云南小粒中度烘焙20片", "brief": "现磨风味 · 独立充氮锁鲜", "price": 59, "orig": 79, "cat": "食品", "sales": "已售 1.5万", "img": "p11.jpg", "tags": ["包邮", "新鲜烘焙"], "desc": "精选云南保山高海拔阿拉比卡豆，中度烘焙带出坚果与焦糖甜感。下单后新鲜烘焙，充氮独立包装锁住香气，一包一杯，3分钟喝到现磨风味。", "specs": { "规格": "10g × 20片", "烘焙度": "中度", "风味": "坚果 / 焦糖 / 可可", "保质期": "12个月" }, "order": 11 },
-    { "id": "p12", "name": "蜂蜜柚子茶 韩国风味果肉冲饮1kg", "brief": "果肉含量≥60% · 冷热双泡", "price": 45, "orig": 59, "cat": "食品", "sales": "已售 2.1万", "img": "p12.jpg", "tags": ["包邮"], "desc": "选用新鲜柚子连皮带肉熬制，果肉含量高达60%，搭配天然蜂蜜，酸甜清爽不腻口。温水冲饮润喉暖胃，加冰气泡水就是一杯夏日特调。", "specs": { "净含量": "1kg", "果肉含量": "≥60%", "保质期": "18个月", "食用方法": "取2-3勺温水冲调" }, "order": 12 }
-  ],
-  "pages": {}
-}
-;
+    "site":  {
+                 "title":  "精选商品"
+             },
+    "nav":  [
+                {
+                    "type":  "category",
+                    "name":  "全部"
+                },
+                {
+                    "type":  "category",
+                    "name":  "数码"
+                },
+                {
+                    "type":  "category",
+                    "name":  "模型"
+                },
+                {
+                    "type":  "category",
+                    "name":  "家居"
+                },
+                {
+                    "type":  "category",
+                    "name":  "食品"
+                },
+                {
+                    "type":  "page",
+                    "name":  "你好",
+                    "key":  "你好"
+                },
+                {
+                    "type":  "page",
+                    "name":  "你们",
+                    "key":  "你们"
+                }
+            ],
+    "products":  [
+                     {
+                         "id":  "p01",
+                         "name":  "无线蓝牙耳机 半入耳降噪运动耳机",
+                         "brief":  "轻盈佩戴 · 24小时长续航",
+                         "price":  299,
+                         "orig":  399,
+                         "cat":  "数码",
+                         "sales":  "已售 2.3万",
+                         "img":  "p01.jpg",
+                         "tags":  [
+
+                                  ],
+                         "desc":  "mnjjij",
+                         "specs":  {
+                                       "蓝牙版本":  "5.3",
+                                       "续航":  "6h + 充电盒18h",
+                                       "防水等级":  "IPX5",
+                                       "单耳重量":  "3.9g",
+                                       "颜色":  "珍珠白 / 曜石黑"
+                                   },
+                         "order":  1
+                     },
+                     {
+                         "id":  "p02",
+                         "name":  "智能运动手表 心率血氧监测多功能手环",
+                         "brief":  "1.85英寸大屏 · 14天续航",
+                         "price":  599,
+                         "orig":  799,
+                         "cat":  "数码",
+                         "sales":  "已售 1.1万",
+                         "img":  "p02.jpg",
+                         "tags":  [
+                                      "包邮",
+                                      "7天无理由退换"
+                                  ],
+                         "desc":  "1.85英寸高清大屏，支持心率、血氧、睡眠全天候监测，内置100+运动模式。50米防水，游泳佩戴无忧。典型使用场景下续航长达14天，告别电量焦虑。",
+                         "specs":  {
+                                       "屏幕":  "1.85英寸 AMOLED",
+                                       "续航":  "典型14天",
+                                       "防水":  "5ATM",
+                                       "运动模式":  "100+ 种",
+                                       "兼容":  "Android / iOS"
+                                   },
+                         "order":  2
+                     },
+                     {
+                         "id":  "p03",
+                         "name":  "便携蓝牙音箱 户外迷你重低音小钢炮",
+                         "brief":  "360°环绕声 · IPX7防水",
+                         "price":  199,
+                         "orig":  259,
+                         "cat":  "数码",
+                         "sales":  "已售 8600",
+                         "img":  "p03.jpg",
+                         "tags":  [
+                                      "包邮",
+                                      "一年质保"
+                                  ],
+                         "desc":  "小身材大音量，定制全频单元加被动低音辐射器，低音澎湃有力。IPX7级防水，浴室、泳池、露营都能用。支持两台串联组成立体声，续航12小时。",
+                         "specs":  {
+                                       "功率":  "10W",
+                                       "续航":  "12小时",
+                                       "防水":  "IPX7",
+                                       "重量":  "420g",
+                                       "充电口":  "Type-C"
+                                   },
+                         "order":  3
+                     },
+                     {
+                         "id":  "p04",
+                         "name":  "纯棉白色短袖T恤 男女同款基础打底",
+                         "brief":  "220g重磅纯棉 · 不易变形",
+                         "price":  79,
+                         "orig":  129,
+                         "cat":  "服饰",
+                         "sales":  "已售 5.6万",
+                         "img":  "p04.jpg",
+                         "tags":  [
+                                      "包邮",
+                                      "7天无理由退换"
+                                  ],
+                         "desc":  "精选220g新疆长绒棉，厚实不透，水洗预缩工艺不易变形。经典小圆领，版型微宽松，单穿打底都好看，是衣柜里少不了的基础款。",
+                         "specs":  {
+                                       "面料":  "100% 精梳棉",
+                                       "克重":  "220g",
+                                       "版型":  "微宽松",
+                                       "尺码":  "S - 2XL",
+                                       "颜色":  "白 / 黑 / 灰"
+                                   },
+                         "order":  4
+                     },
+                     {
+                         "id":  "p05",
+                         "name":  "复古水洗牛仔外套 宽松工装夹克",
+                         "brief":  "经典水洗蓝 · 四季百搭",
+                         "price":  259,
+                         "orig":  359,
+                         "cat":  "服饰",
+                         "sales":  "已售 4200",
+                         "img":  "p05.jpg",
+                         "tags":  [
+                                      "包邮",
+                                      "7天无理由退换"
+                                  ],
+                         "desc":  "12oz重磅丹宁面料，经多道水洗工艺呈现自然复古色落。宽松廓形不挑身材，胸前双口袋经典实用，春秋外穿、冬季内搭都合适。",
+                         "specs":  {
+                                       "面料":  "12oz 丹宁",
+                                       "成分":  "棉 98% + 氨纶 2%",
+                                       "版型":  "宽松",
+                                       "尺码":  "M - 2XL"
+                                   },
+                         "order":  5
+                     },
+                     {
+                         "id":  "p06",
+                         "name":  "轻便帆布双肩包 大容量通勤旅行背包",
+                         "brief":  "15.6英寸电脑仓 · 仅重580g",
+                         "price":  139,
+                         "orig":  199,
+                         "cat":  "服饰",
+                         "sales":  "已售 9800",
+                         "img":  "p06.jpg",
+                         "tags":  [
+                                      "包邮"
+                                  ],
+                         "desc":  "高密度帆布面料，耐磨防泼水。独立电脑仓可容纳15.6英寸笔记本，多隔层设计收纳有序。背部透气网垫加厚肩带，长时间背负也舒适。",
+                         "specs":  {
+                                       "容量":  "20L",
+                                       "重量":  "580g",
+                                       "材质":  "高密度帆布",
+                                       "电脑仓":  "15.6英寸",
+                                       "颜色":  "米白 / 卡其 / 黑"
+                                   },
+                         "order":  6
+                     },
+                     {
+                         "id":  "p07",
+                         "name":  "哑光陶瓷马克杯 北欧简约咖啡杯",
+                         "brief":  "350ml · 磨砂质感",
+                         "price":  49,
+                         "orig":  69,
+                         "cat":  "家居",
+                         "sales":  "已售 1.8万",
+                         "img":  "p07.jpg",
+                         "tags":  [
+                                      "破损包赔"
+                                  ],
+                         "desc":  "高温烧制陶瓷，杯身哑光磨砂釉面，手感细腻。350ml黄金容量，泡咖啡、麦片、牛奶都刚好。可进洗碗机、微波炉，日常使用省心。",
+                         "specs":  {
+                                       "容量":  "350ml",
+                                       "材质":  "高温陶瓷",
+                                       "适用":  "洗碗机 / 微波炉",
+                                       "颜色":  "奶白 / 雾灰 / 抹茶绿"
+                                   },
+                         "order":  7
+                     },
+                     {
+                         "id":  "p08",
+                         "name":  "北欧原木台灯 卧室床头暖光小夜灯",
+                         "brief":  "三档调光 · 原木灯座",
+                         "price":  169,
+                         "orig":  229,
+                         "cat":  "家居",
+                         "sales":  "已售 3600",
+                         "img":  "p08.jpg",
+                         "tags":  [
+                                      "包邮",
+                                      "一年质保"
+                                  ],
+                         "desc":  "橡胶木灯座搭配布艺灯罩，光线经柔化处理温暖不刺眼。触控三档调光，睡前阅读、起夜照明一键切换，为卧室添一份自然气息。",
+                         "specs":  {
+                                       "光源":  "E27 LED（含灯泡）",
+                                       "调光":  "触控三档",
+                                       "灯座":  "天然橡胶木",
+                                       "尺寸":  "Ø20 × H32cm"
+                                   },
+                         "order":  8
+                     },
+                     {
+                         "id":  "p09",
+                         "name":  "香薰蜡烛礼盒 大豆蜡助眠香氛三件套",
+                         "brief":  "天然大豆蜡 · 三种香型",
+                         "price":  89,
+                         "orig":  129,
+                         "cat":  "家居",
+                         "sales":  "已售 7200",
+                         "img":  "p09.jpg",
+                         "tags":  [
+                                      "包邮",
+                                      "礼盒装"
+                                  ],
+                         "desc":  "选用天然大豆蜡与无铅棉芯，燃烧洁净无黑烟。礼盒含海盐鼠尾草、英国梨小苍兰、丝绒玫瑰三种经典香型，单杯可燃约25小时，自用送礼两相宜。",
+                         "specs":  {
+                                       "蜡材":  "天然大豆蜡",
+                                       "规格":  "150g × 3杯",
+                                       "燃烧时长":  "约25h/杯",
+                                       "包装":  "礼盒装"
+                                   },
+                         "order":  9
+                     },
+                     {
+                         "id":  "p10",
+                         "name":  "每日坚果混合装 30包独立小袋零食",
+                         "brief":  "科学配比 · 一天一包",
+                         "price":  69,
+                         "orig":  99,
+                         "cat":  "食品",
+                         "sales":  "已售 3.4万",
+                         "img":  "p10.jpg",
+                         "tags":  [
+                                      "包邮",
+                                      "新鲜日期"
+                                  ],
+                         "desc":  "6种坚果+3种果干科学配比，每包含腰果、巴旦木、核桃、榛子、蔓越莓干等。独立小袋锁鲜包装，一天一包补充优质脂肪，办公加餐、健身补给都合适。",
+                         "specs":  {
+                                       "规格":  "25g × 30包",
+                                       "保质期":  "8个月",
+                                       "储存":  "阴凉干燥处",
+                                       "产地":  "中国"
+                                   },
+                         "order":  10
+                     },
+                     {
+                         "id":  "p11",
+                         "name":  "精品挂耳咖啡 云南小粒中度烘焙20片",
+                         "brief":  "现磨风味 · 独立充氮锁鲜",
+                         "price":  59,
+                         "orig":  79,
+                         "cat":  "食品",
+                         "sales":  "已售 1.5万",
+                         "img":  "p11.jpg",
+                         "tags":  [
+                                      "包邮",
+                                      "新鲜烘焙"
+                                  ],
+                         "desc":  "精选云南保山高海拔阿拉比卡豆，中度烘焙带出坚果与焦糖甜感。下单后新鲜烘焙，充氮独立包装锁住香气，一包一杯，3分钟喝到现磨风味。",
+                         "specs":  {
+                                       "规格":  "10g × 20片",
+                                       "烘焙度":  "中度",
+                                       "风味":  "坚果 / 焦糖 / 可可",
+                                       "保质期":  "12个月"
+                                   },
+                         "order":  11
+                     },
+                     {
+                         "id":  "p12",
+                         "name":  "蜂蜜柚子茶 韩国风味果肉冲饮1kg",
+                         "brief":  "果肉含量≥60% · 冷热双泡",
+                         "price":  45,
+                         "orig":  59,
+                         "cat":  "食品",
+                         "sales":  "已售 2.1万",
+                         "img":  "p12.jpg",
+                         "tags":  [
+                                      "包邮"
+                                  ],
+                         "desc":  "选用新鲜柚子连皮带肉熬制，果肉含量高达60%，搭配天然蜂蜜，酸甜清爽不腻口。温水冲饮润喉暖胃，加冰气泡水就是一杯夏日特调。",
+                         "specs":  {
+                                       "净含量":  "1kg",
+                                       "果肉含量":  "≥60%",
+                                       "保质期":  "18个月",
+                                       "食用方法":  "取2-3勺温水冲调"
+                                   },
+                         "order":  12
+                     }
+                 ],
+    "pages":  {
+                  "你好":  {
+                             "blocks":  [
+
+                                        ]
+                         }
+              }
+};
 
 const IMG_DATA = {
   "p01.jpg": "data:image/jpeg;base64,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",
