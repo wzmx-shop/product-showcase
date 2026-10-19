@@ -576,7 +576,8 @@ async function loadData() {
   }
   document.title = DATA.site?.title || "精选商品";
   document.getElementById("loading").style.display = "none";
-  init();
+  renderNav();
+  route();
 }
 
 /* ================= 图片路径：开发 vs 单文件 ================= */
